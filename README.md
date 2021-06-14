@@ -18,7 +18,7 @@ TO DO:
 - [ ] Remove inline width style and feed it through .less file
 - [ ] Once refactored, submit to SO as PR
 
-Add this code to functions.php:
+Add this code to functions.php within the Theme being used (note: suggest using child theme):
 ```php
 function mytheme_extend_image_form_caption($form_options, $widget)
 {
