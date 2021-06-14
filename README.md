@@ -9,6 +9,10 @@ Instructions:
 4. Save, reload your site
 5. You should now have the ability to set up an image caption and align it left, right, or center to the image
 
+CSS Classes:
+`.sow-image-caption-container`
+`.sow-image-caption`
+
 TO DO:
 - [ ] Refactor
 - [ ] Remove inline width style and feed it through .less file
