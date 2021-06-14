@@ -56,4 +56,5 @@ function mytheme_extend_image_form_caption($form_options, $widget)
 
     return $form_options;
 }
-add_filter('siteorigin_widgets_form_options_sow-image', 'mytheme_extend_image_form_caption', 10, 2);```
+add_filter('siteorigin_widgets_form_options_sow-image', 'mytheme_extend_image_form_caption', 10, 2);
+```
