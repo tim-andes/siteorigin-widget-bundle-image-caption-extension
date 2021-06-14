@@ -24,11 +24,13 @@
 <?php if ( ! empty( $url ) ) : ?></a><?php endif; ?>
 </div>
 
+<!-- Begin extension -->
 <?php if ( ! empty( $caption ) ) : ?>
 	<div class="sow-image-caption-container">
 		<div style="width:<?php echo $attributes['width']; ?>px;" class=sow-image-caption><small><em><?php echo $caption; ?></em></small></div>
 	</div>
 <?php endif; ?>
+<!-- End extension -->
 
 <?php if( $title_position == 'below' ) : ?>
 	<?php echo $args['before_title'] . $title . $args['after_title']; ?>
