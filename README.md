@@ -46,7 +46,7 @@ function mytheme_extend_image_form_caption($form_options, $widget)
     ]
     ];
 
-    // merge caption items into form_options
+    // Merge caption items into form_options
     $form_options = array_merge(
         $form_options_slice_to_six,
         $insert_array_caption,
