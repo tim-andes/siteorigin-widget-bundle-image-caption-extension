@@ -6,7 +6,7 @@ Instructions:
 1. Back up the current version of your website
 2. Open your website directory and navigate to `~/app/public/wp-content/plugins/so-widgets-bundle/widgets/`
 3. Within the widgets directory, delete and replace the image folder with the `image` folder in this repository
-4. Save, reload your site
+4. Save and reload your site
 5. You should now have the ability to set up an image caption and align it left, right, or center to the image
 
 CSS Classes:
