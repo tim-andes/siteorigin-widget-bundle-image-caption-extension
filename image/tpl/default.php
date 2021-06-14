@@ -24,7 +24,7 @@
 <?php if ( ! empty( $url ) ) : ?></a><?php endif; ?>
 </div>
 
-<!-- Begin extension -->
+<!-- Begin extension. Note: Remove inline styling upon refactor -->
 <?php if ( ! empty( $caption ) ) : ?>
 	<div class="sow-image-caption-container">
 		<div style="width:<?php echo $attributes['width']; ?>px;" class=sow-image-caption><small><em><?php echo $caption; ?></em></small></div>
