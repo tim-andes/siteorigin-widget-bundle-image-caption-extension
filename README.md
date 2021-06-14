@@ -17,3 +17,42 @@ TO DO:
 - [ ] Refactor
 - [ ] Remove inline width style and feed it through .less file
 - [ ] Once refactored, submit to SO as PR
+
+Add this code to functions.php:
+```php
+function mytheme_extend_image_form_caption($form_options, $widget)
+{
+    // Split form_options
+    $form_options_slice_to_six = array_slice($form_options, 0, 6);
+    $form_options_slice_after_six = array_slice($form_options, 6);
+
+    // Prep items to insert into form_options
+    $insert_array_caption = ['caption' => [
+        'type' => 'text',
+        'label' => __('Caption text', 'so-widgets-bundle'),
+    ]
+    ];
+    $insert_array_caption_text = ['caption_align' => [
+        'type' => 'select',
+        'label' => __('Caption alignment', 'so-widgets-bundle'),
+        'default' => 'hidden',
+        'options' => [
+            'default' => __('Default', 'so-widgets-bundle'),
+            'left' => __('Left', 'so-widgets-bundle'),
+            'right' => __('Right', 'so-widgets-bundle'),
+            'center' => __('Center', 'so-widgets-bundle'),
+        ]
+    ]
+    ];
+
+    // merge caption items into form_options
+    $form_options = array_merge(
+        $form_options_slice_to_six,
+        $insert_array_caption,
+        $insert_array_caption_text,
+        $form_options_slice_after_six
+    );
+
+    return $form_options;
+}
+add_filter('siteorigin_widgets_form_options_sow-image', 'mytheme_extend_image_form_caption', 10, 2);```
